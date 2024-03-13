@@ -1,6 +1,7 @@
 ---
 import removeTrailingSlash from "@/utils/removeTrailingSlash";
 import presentation from "@/data/presentation";
+import { Icon } from "astro-icon/components";
 
 const pathname = removeTrailingSlash(Astro.url.pathname);
 ---
@@ -30,6 +31,21 @@ const pathname = removeTrailingSlash(Astro.url.pathname);
             ["text-neutral-100"]: pathname === "/posts",
           }}>Posts</a
         >
+      </li>
+      <li>/</li>
+      <li>
+        <a
+          href="https://www.twitch.tv/lalocandadeltech/videos"
+          target="_blank"
+          class:list={{
+            ["hover:text-neutral-100"]: true,
+            ["text-neutral-100"]: pathname === "/posts",
+            ["flex items-center"]: true,
+          }}
+        >
+          <span class="pr-2 text-purple-400">La Locanda Del Tech</span>
+          <Icon class="text-purple-400 opacity-75" name="external-link" />
+        </a>
       </li>
     </ul>
   </nav>
