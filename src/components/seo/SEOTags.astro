@@ -3,6 +3,7 @@ import { SEO } from "astro-seo";
 import { AstroFont } from "astro-font";
 import { SITE_URL } from "@/data/config";
 import type { HeadTags } from "@/utils/types/HeadTags";
+import PostHog from "../PostHog.astro";
 
 type Props = HeadTags;
 
@@ -76,4 +77,5 @@ const openGraph = {
       },
     ]}
   />
+  <PostHog />
 </head>
